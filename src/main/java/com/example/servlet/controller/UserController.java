@@ -11,19 +11,26 @@ import com.example.servlet.models.SingletoneModel;
 
 @RestController
 @RequestMapping("v1/user")
-
 public class UserController {
 
 	// field injection
 	@Autowired
 	SingletoneModel model;
 
+	
+	
+	
 
-	
-	
+
 	@GetMapping("/")
 	ResponseEntity<String> getBeanName() {
 		model.show();
+	
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+	@GetMapping("/test")
+	ResponseEntity<String> getBeanNameTest() {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 }

@@ -13,6 +13,7 @@ public class SingletoneModel {
 	@Autowired
 	private ApplicationContext context;
 	private PrototypeModel protoMode;
+	
 
 	/*
 	 * this is called method injection and if we call this method via "this" keyword
@@ -23,7 +24,6 @@ public class SingletoneModel {
 	 */
 	@Lookup
 	public PrototypeModel protoBeanInitia()
-
 	{
 		// System.out.println("object of the prototype is"+model.hashCode());
 		return null;
@@ -46,6 +46,8 @@ public class SingletoneModel {
 		// prototype bean injected via ApplicationContext
 		protoMode = (PrototypeModel) context.getBean("prototypeModel");
 		System.out.println("3rd object of the prototype is " + protoMode.hashCode());
+		
+	
 	}
 
 }
