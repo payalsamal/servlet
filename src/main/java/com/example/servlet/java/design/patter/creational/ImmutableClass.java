@@ -1,4 +1,4 @@
-package com.example.servlet.java.design.patter;
+package com.example.servlet.java.design.patter.creational;
 
 import java.util.ArrayList;
 import java.util.List;
